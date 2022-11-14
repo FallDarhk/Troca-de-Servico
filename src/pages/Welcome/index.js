@@ -4,7 +4,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
   TouchableOpacity
 } from 'react-native'
 
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
   },
   containerForm:{
     flex:1,
-    backgroundColor: '#F5A9DC',
+    backgroundColor: '#fff',
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     paddingStart: '5%',

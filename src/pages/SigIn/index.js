@@ -1,9 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 
+import { useNavigation } from '@react-navigation/native' 
+
 import * as Animatable from 'react-native-animatable'
 
 export default function SignIn() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Animatable.View delay={500} animation="fadeInLeft" style={styles.containerHeader}>
@@ -27,8 +31,11 @@ export default function SignIn() {
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRegister}>
-          <Text style={styles.registerText}>Ainda não possuo uma conta!</Text>
+        <TouchableOpacity 
+          style={styles.buttonRegister} 
+          onPress={ () => navigation.navigate('Register')}
+        >
+          <Text style={styles.registerText}>Ainda não possui uma conta!</Text>
         </TouchableOpacity>
 
       </Animatable.View>
@@ -52,7 +59,7 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   containerForm:{
-    backgroundColor: '#F5A9DC',
+    backgroundColor: '#fff',
     flex:1,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
