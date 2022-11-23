@@ -27,7 +27,10 @@ export default function SignIn() {
           style={styles.input}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={ () => navigation.navigate('TabBar')}
+        >
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
 

@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.falldark.trocadeservico"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "865f1401-4904-4987-96d1-63c052b67010"
+      }
     }
   }
 }
